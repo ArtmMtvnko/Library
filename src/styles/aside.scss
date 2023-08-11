@@ -43,3 +43,40 @@ aside {
         cursor: pointer;
     }
 }
+
+.toggle {
+    $pin-width: 30px;
+    $toogle-width: 60px;
+    $toogle-height: 30px;
+
+    position: relative;
+    width: $toogle-width;
+    height: $toogle-height;
+    cursor: pointer;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 28px;
+        background-color: #D8D9DA;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: $toogle-height;
+        width: $pin-width;
+        border-radius: 28px;
+        background-color: #fa5353;
+        transition: all 0.3s;
+    }
+
+    &:checked {
+        &::after {
+            transform: translateX(calc($toogle-width - $pin-width));
+            background-color: #2faf73;
+        }
+    }
+}

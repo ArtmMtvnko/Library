@@ -13,24 +13,34 @@
             </div>
             <form class="aside__form" action="#">
                 <div class="aside__author">
-                    <input type="text" name="author">
+                    <input id="bookAuthor" type="text" name="author" placeholder="Author">
                 </div>
                 <div class="aside__book-title">
-                    <input type="text" name="book-title">
+                    <input id="bookTitle" type="text" name="book-title" placeholder="Title name">
                 </div>
                 <div class="aside__number-of-pages">
-                    <input type="number" name="number-of-pages">
+                    <input id="bookPageAmount" type="number" name="number-of-pages" placeholder="Count of pages">
                 </div>
                 <div class="aside__is-read">
                     <label for="toogleCheckbox">Already read?</label>
                     <input id="toogleCheckbox" class="toggle" type="checkbox" name="checkbox">
                 </div>
                 <div class="aside__submit">
-                    <input type="submit" value="Add">
+                    <input id="bookSubmitBtn" type="submit" value="Add">
                 </div>
             </form>
         </aside>
-        <main></main>
+        <main>
+            <div id="booksList" class="main__list">
+                <div class="main__item">
+                    <div class="item__title">Test Title</div>
+                    <div class="item__author">Test Author</div>
+                    <div class="item__count-of-page">Test Count</div>
+                    <div class="item__is-read">False</div>
+                    <button class="item__delete-btn">Delete</button>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>
