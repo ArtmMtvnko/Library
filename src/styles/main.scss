@@ -6,14 +6,36 @@ main {
     width: 100%;
     height: auto;
     
-    > div {
+    .main__item {
         display: grid;
-        grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+        grid-template: 1fr / repeat(5, auto);
         align-items: center;
-        justify-items: center;
         
         margin: 10px;
         padding: 30px;
-        background-color: seagreen;
+        background-color: #757d9a;
+
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            margin: 0 40px;
+            font-size: 18px;
+            color: #272829;
+        }
+
+        span {
+            font-size: 28px;
+            font-weight: 600;
+            color: #D8D9DA;
+        }
     }
+}
+
+.item__delete-btn {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #f49797;
 }

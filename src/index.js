@@ -21,4 +21,10 @@ submitBtn.addEventListener('click', event => {
         pageAmount: pageAmount.value,
     })
     bookList.showBooks(list)
+
+    const deleteBookBtns = document.querySelectorAll('.item__delete-btn')
+    deleteBookBtns.forEach(button => button.addEventListener('click', e => {
+        bookList.removeBook(e.target.parentNode.children[0])
+        bookList.showBooks(list)
+    }))
 })
