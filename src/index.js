@@ -28,8 +28,18 @@ submitBtn.addEventListener('click', event => {
     const deleteBookBtns = document.querySelectorAll('.item__delete-btn')
     deleteBookBtns.forEach(button => button.addEventListener('click', e => {
         let numberToIdentify = e.target.parentNode.children[0].innerText
-        console.log(numberToIdentify);
+        bookList.removeBook(numberToIdentify)
+        bookList.showBooks(list)
+        refresh()
+    }))
+})
+
+function refresh() {
+    const deleteBookBtns = document.querySelectorAll('.item__delete-btn')
+    deleteBookBtns.forEach(button => button.addEventListener('click', e => {
+        let numberToIdentify = e.target.parentNode.children[0].innerText
         bookList.removeBook(numberToIdentify)
         bookList.showBooks(list)
     }))
-})
+}
+
