@@ -27,8 +27,9 @@ submitBtn.addEventListener('click', event => {
 
     const deleteBookBtns = document.querySelectorAll('.item__delete-btn')
     deleteBookBtns.forEach(button => button.addEventListener('click', e => {
-        const titleToIdentify = e.target.parentNode.children[0].innerText
-        bookList.removeBook(titleToIdentify)
+        let numberToIdentify = e.target.parentNode.children[0].innerText
+        console.log(numberToIdentify);
+        bookList.removeBook(numberToIdentify)
         bookList.showBooks(list)
     }))
 })

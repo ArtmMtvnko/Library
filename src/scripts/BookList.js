@@ -7,11 +7,10 @@ export class BookList {
         this.books.push(bookObj)
     }
 
-    removeBook(title) {
-        const index = this.books.findIndex(book => book.title === title)
-        console.log(index, title);
+    removeBook(bookNumber) {
+        const index = this.books.findIndex(book => book.number === parseInt(bookNumber))
+        console.log(index, bookNumber);
         this.books.splice(index, 1)
-        console.log(this.books);
     }
 
     showBooks(elementNode) {
