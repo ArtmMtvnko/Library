@@ -6,6 +6,42 @@
     <title>Library</title>
 </head>
 <body>
-    
-<script defer src="bundle.bfd3f2fbe5d231e6d75a.js"></script></body>
+    <div class="wrap">
+        <aside>
+            <div class="aside__title">
+                <p>Library</p>
+            </div>
+            <form class="aside__form" action="#">
+                <div class="aside__author">
+                    <input id="bookAuthor" type="text" name="author" placeholder="Author">
+                </div>
+                <div class="aside__book-title">
+                    <input id="bookTitle" type="text" name="book-title" placeholder="Title name">
+                </div>
+                <div class="aside__number-of-pages">
+                    <input id="bookPageAmount" type="number" name="number-of-pages" placeholder="Count of pages">
+                </div>
+                <div class="aside__is-read">
+                    <label for="toogleCheckbox">Already read?</label>
+                    <input id="toogleCheckbox" class="toggle" type="checkbox" name="checkbox">
+                </div>
+                <div class="aside__submit">
+                    <input id="bookSubmitBtn" type="submit" value="Add">
+                </div>
+            </form>
+        </aside>
+        <main>
+            <div id="booksList" class="main__list">
+                <div class="main__item">
+                    <div class="item__number">1</div>
+                    <div class="item__title"><span>Title: </span>Test Title</div>
+                    <div class="item__author"><span>Author: </span>Test Author</div>
+                    <div class="item__count-of-page"><span>Amount of pages: </span>Test Count</div>
+                    <div class="item__is-read"><span>Read: </span>False</div>
+                    <button class="item__delete-btn">Delete</button>
+                </div>
+            </div>
+        </main>
+    </div>
+<script defer src="bundle.9b35d28a6f7ad102bb89.js"></script></body>
 </html>
