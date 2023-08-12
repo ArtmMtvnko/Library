@@ -20,6 +20,7 @@ export class BookList {
             elementNode.innerHTML += 
             `
                 <div class="main__item">
+                    <div class="item__number">${book.number}</div>
                     <div class="item__title"><span>Title: </span>${book.title}</div>
                     <div class="item__author"><span>Author: </span>${book.author}</div>
                     <div class="item__count-of-page"><span>Amount of pages: </span>${book.pageAmount}</div>

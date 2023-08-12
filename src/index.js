@@ -12,9 +12,12 @@ const pageAmount = document.querySelector('#bookPageAmount')
 const isRead = document.querySelector('#toogleCheckbox')
 const submitBtn = document.querySelector('#bookSubmitBtn')
 
+let numberOfBook = 1
+
 submitBtn.addEventListener('click', event => {
     event.preventDefault()
     bookList.addBook({
+        number: numberOfBook++,
         title: title.value,
         author: author.value,
         isRead: isRead.checked,
@@ -24,7 +27,8 @@ submitBtn.addEventListener('click', event => {
 
     const deleteBookBtns = document.querySelectorAll('.item__delete-btn')
     deleteBookBtns.forEach(button => button.addEventListener('click', e => {
-        bookList.removeBook(e.target.parentNode.children[0])
+        const titleToIdentify = e.target.parentNode.children[0].innerText
+        bookList.removeBook(titleToIdentify)
         bookList.showBooks(list)
     }))
 })
